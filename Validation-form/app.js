@@ -19,22 +19,21 @@ app.get("/register", (req, res)=> {
 })
 
 app.post("/register",  [ 
-    check('username', 'This username must be 3+ characters long')
+    check('username', 'This username must be 3+ to 20 characters long')
     .exists()
-    .isLength({ min: 3 }),
+    .isLength({ min: 3, max: 20 }),
 
     check('email', 'Email is not valid')
     .isEmail()
     .normalizeEmail()
+
 ], (req, res) => {
     
     const errors = validationResult(req)
     if(!errors.isEmpty()) {
         // return res.status(422).jsonp(errors.array())
         const alert = errors.array()
-        res.render('register.ejs', {
-            alert
-        })
+        res.render('register.ejs', { alert })
     }
 })
 

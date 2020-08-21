@@ -11,9 +11,7 @@
     <div class="container">
         <h1>Register</h1>
 
-
-
-          <!-- <% if(typeOf alert != 'undefined')  { %>
+          <% if(typeof alert != 'undefined')  { %>
             <% alert.forEach(function(error) { %>
                 <div class="alert alert-warning alert-dismissible fade show" role="alert">
                     <%= error.msg %>
@@ -22,7 +20,7 @@
                     </button>
                   </div>
            <% }) %>
-        <% } %> -->
+        <% } %>
         
         <form action="/register" method="POST">
 
