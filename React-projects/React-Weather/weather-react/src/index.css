@@ -12,12 +12,13 @@ body {
   background-image: url('./assets/night2.jpg');
   background-size: cover;
   background-position: bottom;
-  transition: 0.4s ease-out;
+  transition: .8s ease;
 }
 
-.App-warm {
+.App.warm {
   background-image: url('./assets/warm2.jpg');
   background-size: cover;
+
 }
 
 main {
@@ -50,7 +51,7 @@ main {
   color: #313131;
   font-size: 20px;
 
-  transition: 0.4s ease;
+  transition: .4s ease;
 }
 
 .search-box .search-bar:focus{
