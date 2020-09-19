@@ -19,6 +19,8 @@ class App extends Component {
       newTodo: ""
     };
   }
+
+
   handleSubmit = event => {
     event.preventDefault()
     if(!this.state.newTodo.trim()) return false; //make sure there is a todo or no todo or a bunch of spaces
@@ -39,10 +41,22 @@ class App extends Component {
     this.setState({[event.target.name]: event.target.value})
   }
 
+  toggleComplete = id => {
+    this.setState( copyState => {
+      let index = copyState.todos.findIndex(
+        oneTodo => oneTodo.id === parseInt(id)
+      );
+      // had to delete strictMode from index.js
+      copyState.todos[index].isComplete = !copyState.todos[index].isComplete
+      // flipping is complete to toggle the isComplete between true and false
+      return copyState
+    })
+  }
   // runs everytime state or props change
   render() {
     return (
       <TodoApp
+        toggleComplete={this.toggleComplete}
         handleSubmit={this.handleSubmit}
         todos={this.state.todos}
         handleChange={this.handleChange}

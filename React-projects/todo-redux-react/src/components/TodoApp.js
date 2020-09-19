@@ -13,7 +13,9 @@ class TodoApp extends Component {
                 handleChange={this.props.handleChange} 
                 newTodo={this.props.newTodo} 
                 /> 
-               <TodoList todos={this.props.todos}/>
+               <TodoList 
+               toggleComplete = {this.props.toggleComplete}
+               todos={this.props.todos}/>
 
             </div>
         )
