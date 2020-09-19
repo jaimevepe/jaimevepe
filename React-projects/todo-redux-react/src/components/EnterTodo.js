@@ -2,9 +2,7 @@ import React, { Component } from 'react'
 import '../App.css'
 
 class EnterTodo extends Component {
-    handleChange = event => {
-        this.props.handleChange(event) // from App.js handllechange
-    }
+  
     render() {
         return (
             <div className="App">
@@ -13,7 +11,7 @@ class EnterTodo extends Component {
                         type="text"
                         name="newTodo"
                         placeholder="Enter Todo"
-                        onChange={this.handleChange} 
+                        onChange={this.props.handleChange} 
                         value={this.props.newTodo} />
                 </form>
             </div>
