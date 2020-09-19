@@ -32,7 +32,7 @@ class App extends Component {
       }
     ]
 
-    this.setState({todos: newTodos})
+    this.setState({todos: newTodos, newTodo: ""}) // newTodo= "" is to empty out the input field
   }
 
   handleChange = event => {
@@ -43,8 +43,10 @@ class App extends Component {
   render() {
     return (
       <TodoApp
+        handleSubmit={this.handleSubmit}
         todos={this.state.todos}
-        handleChange={this.handleChange} />
+        handleChange={this.handleChange}
+        newTodo={this.state.newTodo} />
     )
   }
 }
