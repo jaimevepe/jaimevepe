@@ -1,4 +1,4 @@
-import Redux from 'redux';
+import * as redux from 'redux';
 import { ADD_ITEM,
         DELETE_ITEM,
         TOGGLE_COMPLETE } from "../actions";
@@ -37,7 +37,7 @@ const todosReducer = (state = initialState, action) => {
     }
 }
 
-const store = Redux.createStore(
+const store = redux.createStore(
     todosReducer,
     devToolsEnhancer()
     )

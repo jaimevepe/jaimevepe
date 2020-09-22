@@ -8,16 +8,18 @@ class TodoList extends React.Component {
         <div>
           <ul>
             {
-              this.props.todos.map( todo => {
+              this.props.items.map( todo => {
                 let classString = todo.isComplete ? 'completed' : '';
                 return (
-                  <li className={classString}
-                    key={todo.id}
-                    onClick={() => {
+                  <li 
+                  key={todo._id}
+                  className={classString}
+                    
+                  onClick={() => {
                       this.props.toggleComplete(todo.id)
                     }}
                   >
-                    {todo.text}
+                    {todo.description}
                   </li>
                 )
               })

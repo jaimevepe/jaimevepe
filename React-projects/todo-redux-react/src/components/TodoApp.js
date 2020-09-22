@@ -14,8 +14,8 @@ class TodoApp extends Component {
                 newTodo={this.props.newTodo} 
                 /> 
                <TodoList 
-               toggleComplete = {this.props.toggleComplete}
-               todos={this.props.todos}/>
+                 toggleComplete = {this.props.toggleComplete}
+                 todos={this.props.items}/>
 
             </div>
         )
