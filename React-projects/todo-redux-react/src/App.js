@@ -81,8 +81,17 @@ toggleComplete = id => {
   }
 }
 
-const mapStateToProps = state => (
-  {items: state.todos}
+// cutout a slice of state and make it available to App (component of our choice)
+const mapStateToProps = prevState => (
+  {
+    items: prevState.todos
+  }
+)
+const mapDispatchToProps = dispatch => (
+  {
+    addItem: text => dispatch(addItem(text)),// takes in text of new todo
+    deleteItem: id => dispatch(deleteItem(id))
+  }
 )
 
 export default connect(mapStateToProps)(App);
