@@ -33,7 +33,7 @@ function App() {
             />
 
             <input 
-              type='password'
+              type={showPassword ? 'text' : 'password'}
               name="password"
               placeholder="Enter Password"
               value={password.name}
