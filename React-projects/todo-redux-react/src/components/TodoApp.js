@@ -11,10 +11,10 @@ class TodoApp extends Component {
                <EnterTodo 
                 handleSubmit={this.props.handleSubmit}
                 handleChange={this.props.handleChange} 
-                newTodo={this.props.newTodo} 
+                // newTodo={this.props.newTodo} 
                 /> 
                <TodoList 
-                 toggleComplete = {this.props.toggleComplete}
+                 toggleComplete={this.props.toggleComplete}
                  todos={this.props.items}/>
 
             </div>

@@ -3,6 +3,7 @@ import './App.css';
 import TodoApp from './components/TodoApp';
 import axios from 'axios';
 import {connect} from 'react-redux'
+import { addItem, deleteItem } from './actions'
 
 class App extends Component {
   //runs once in the beggining and sets things up
@@ -15,16 +16,16 @@ class App extends Component {
     // };
   }
 
-  // componentDidMount(){
-  //   axios(this.url)
-  //   .then(res=>{
-  //     this.setState({todos: res.data})
-  //     console.log('res is: ', res)
-  //   })
-  //   .catch(err=>{
-  //     this.setState({err})
-  // })
-  // }
+  componentDidMount(){
+    axios(this.url)
+    .then(res=>{
+      this.setState({todos: res.data})
+      console.log('res is: ', res)
+    })
+    .catch(err=>{
+      this.setState({err})
+  })
+  }
     
 
   // two way data binding
@@ -73,10 +74,11 @@ toggleComplete = id => {
     return (
       <TodoApp
         toggleComplete={this.toggleComplete}
-        handleSubmit={this.handleSubmit}
+        handleSubmit={this.props.addItem}
         items={this.props.items}
         handleChange={this.handleChange}
-        newTodo={this.props.newTodo} />
+        // newTodo={this.props.newTodo} 
+        />
     )
   }
 }

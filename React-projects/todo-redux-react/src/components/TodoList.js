@@ -5,13 +5,13 @@ class TodoList extends React.Component {
     
     render() {
       return (
-        <div>
+        
           <ul>
             {
-              this.props.items.map( todo => {
+              this.props.todos.map(todo => {
                 let classString = todo.isComplete ? 'completed' : '';
                 return (
-                  <li 
+                  <li                   
                   key={todo._id}
                   className={classString}
                     
@@ -25,7 +25,7 @@ class TodoList extends React.Component {
               })
             }
           </ul>
-        </div>
+        
       )
     }
   }
