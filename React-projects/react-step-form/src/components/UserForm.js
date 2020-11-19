@@ -14,7 +14,7 @@ export class UserForm extends Component {
         occupation: '',
         city: '',
         bio: ''
-    }
+    };
 
     // TODO: Procced to the next step
     nextStep = () => {
@@ -22,7 +22,7 @@ export class UserForm extends Component {
         this.setState({
             step: step + 1
         });
-    }
+    };
 
     // TODO: Go back to prev step
     prevStep = () => {
@@ -30,12 +30,12 @@ export class UserForm extends Component {
         this.setState({
             step: step - 1
         });
-    }
+    };
 
     // Handle field change
     handleChange = input => e => {
         this.setState({[input]: e.target.value}); //whatever is entered will become input
-    }
+    };
 
     render() {
         // Pull step from state
@@ -59,7 +59,7 @@ export class UserForm extends Component {
                 handleChange = { this.handleChange}
                 values={values}
                 style={style.textField}
-              />
+               />
              )
             case 2:
               return (
@@ -69,7 +69,7 @@ export class UserForm extends Component {
                   handleChange = {this.handleChange}
                   values={values}
                   style={style.textField}
-                />
+                 />
               )
             case 3:
               return (

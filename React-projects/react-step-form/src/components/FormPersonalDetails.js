@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {MuiThemeProvider, createMuiTheme} from '@material-ui/core/styles';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Typography from '@material-ui/core/Typography'
 import TextField from '@material-ui/core/TextField';
@@ -12,11 +12,11 @@ export class FormPersonalDetails extends Component {
     continue= e => {
         e.preventDefault();
         this.props.nextStep();
-    }
+    };
     back = e => {
         e.preventDefault();
         this.props.prevStep();
-    }
+    };
     render() {
         const { values, handleChange, style } = this.props; 
         const navBarStyle = {
