@@ -18,9 +18,10 @@ class App extends Component {
     }
 
     render() {
+        const { data } = this.state;
         return (
             <div className={styles.cointaner}>
-                <Cards />
+                <Cards data = {data} />
                 <CountryPicker />
                 <Chart />
             </div>
