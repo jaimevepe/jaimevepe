@@ -21,4 +21,4 @@ withLog.on("Later bitch", () => console.log("Bye biiiiitch"));
 // myFunc gets passed through execute(taskFunc) = myFunc
 const myFunc = () => console.log("*** Executing something ***")
 
-withLog.execute(myFunc)
+withLog.execute(myFunc) // myFunc will get passes throu execute on Withlog
