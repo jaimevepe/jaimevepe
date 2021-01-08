@@ -12,7 +12,7 @@ FROM employees;
 
 SELECT first_name ||' '|| last_name As "Full Name",
     salary as "Before Salary",
-    salary * 1.10 as "New salary"
+    salary * 1.10 as "New salary" --adding to their salary
 FROM employees
 WHERE salary * 1.10 > 9000;
 
@@ -36,7 +36,7 @@ FROM employees;
 SELECT COUNT(department_id)
 FROM employees;
 
---Filtering
+--    Filtering   --
 SELECT employee_id, last_name, salary,
 commission_pct
 FROM employees 
@@ -89,4 +89,34 @@ WHERE salary > 8504.5652173913043478;
 SELECT last_name, salary
 FROM employees
 WHERE salary > (SELECT AVG(salary)
-                FROM employees);
+FROM employees);
+
+--------------
+-- GROUPIMG --
+SELECT job_id, MAX(salary)
+FROM employees
+GROUP By job_id
+ORDER BY MAX(salary); -- Lowest to Highest salary
+
+SELECT job_id, salary
+FROM employees
+-- GROUP By job_id
+ORDER BY salary DESC --  Or ASC
+--  NULLS FIRST; -- To have the Nulls on the top
+
+SELECT last_name, 
+    first_name, 
+    job_id, 
+    salary
+FROM hr.employees
+ORDER BY last_name ASC, 
+first_name DESC;
+
+SELECT *
+FROM locations
+ORDER BY state_province;
+
+--POSITION
+SELECT POSITION('ll' IN 'Hello Dolly!');
+--SUBSTRING
+SELECT SUBSTRING('Hello Dolly!' FROM 1 FOR 5);
