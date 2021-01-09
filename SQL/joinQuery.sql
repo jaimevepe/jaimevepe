@@ -63,6 +63,9 @@ ON p.productid = s.productid;
 SELECT *
 FROM hr.players;
 
+
+--LEFT JOIN
+
 SELECT 
 p.fname, 
 p.lname, 
@@ -71,3 +74,33 @@ p.weight,
 t.name
 FROM hr.players p LEFT JOIN hr.teams t
 ON p.team_id = t.id;
+-----------------------------------------
+--This gives us a bunch of repeated names
+SELECT first_name,
+department_name
+FROM hr.employees, departments;
+--This does not return repeating names
+SELECT employee_id, first_name, d.department_name
+FROM hr.employees e JOIN hr.departments d
+ON e.department_id = d.department_id;
+
+-- SELF JOIN--
+SELECT 
+first_name,
+manager_id,
+employee_id
+FROM hr.employees;
+
+SELECT 
+first_name,
+manager_id,
+employee_id,
+job_id
+FROM hr.employees;
+
+--Select employees and manager in two seperate columns 
+SELECT emp.first_name || ' ' || emp.last_name AS "Employee",
+       mgr.first_name || ' ' ||  mgr.last_name AS "Manager"
+FROM hr.employees emp
+LEFT JOIN employees mgr
+ ON emp.manager_id = mgr.employee_id;
