@@ -100,7 +100,16 @@ FROM hr.employees;
 
 --Select employees and manager in two seperate columns 
 SELECT emp.first_name || ' ' || emp.last_name AS "Employee",
-       mgr.first_name || ' ' ||  mgr.last_name AS "Manager"
+       mgr.first_name || ' ' ||  mgr.last_name AS "Manager",
 FROM hr.employees emp
 LEFT JOIN employees mgr
  ON emp.manager_id = mgr.employee_id;
+
+
+ SELECT emp.first_name || ' ' || emp.last_name AS "Employee",
+       mgr.first_name || ' ' ||  mgr.last_name AS "Employee Manager",
+       d.department_name AS "Department",
+       d.manager_id AS "Department Manager"
+FROM hr.employees emp
+    LEFT JOIN employees mgr ON emp.manager_id = mgr.employee_id
+    LEFT JOIN hr.departments d ON d.department_id = emp.department_id;
