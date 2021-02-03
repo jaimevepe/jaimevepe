@@ -6,7 +6,7 @@
 
 greet = 'Hello Bob!'
 try: 
-    isGreet = int(greet) #turned it into a number (dangerous code)
+    isGreet = int(greet) # converts it into a number (dangerous code)
 except:
     isGreet = -1
 print("First", isGreet) # will print -1
