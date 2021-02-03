@@ -9,14 +9,14 @@ try:
     isGreet = int(greet) #turned it into a number (dangerous code)
 except:
     isGreet = -1
-print("First", isGreet)
+print("First", isGreet) # will print -1
 
 greet = '123'
 try:
     isGreet = int(greet) # dangerous code
 except:
     isGreet = -1
-print("Second", isGreet)
+print("Second", isGreet) # will print 123
 
 # Entering Data
 
@@ -28,7 +28,7 @@ except:
     convertToNum = -1
 
 if convertToNum > 0:
-    print("Nice work",convertToNum)
+    print("Nice work: ",convertToNum)
 else:
     print("Not a number")
 
