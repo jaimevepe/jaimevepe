@@ -42,17 +42,17 @@ function palindrome3(str) {
    console.log(palindrome3("race CAR"))
 
 
-// function palindromeArray(arr) {
-//     //initialize to true
-//     let isPalindrome = arr.split('');
-//     //loop through half length of the array
-//     for(let i = 0; i < arr.length / 2; i++) {
-//         //check if first half is equal to the second half
-//         if(arr[i] !== arr[arr.length - i - 1]){
-//           isPalindrome = false; 
-//           break;
-//         }
-//     }
-//     return isPalindrome;
-// }
-// console.log(palindromeArray('wow'))
+function palindromeArray(arr) {
+    //initialize to true
+    let isPalindrome = arr.split('');
+    //loop through half length of the array
+    for(let i = 0; i < arr.length / 2; i++) {
+        //check if first half is equal to the second half
+        if(arr[i] !== arr[arr.length - i - 1]){
+          isPalindrome = false; 
+          break;
+        }
+    }
+    return isPalindrome;
+}
+console.log(palindromeArray('wow'))

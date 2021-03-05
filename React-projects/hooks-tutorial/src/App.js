@@ -19,7 +19,7 @@ function App() {
             [name] : value
         })
     }
-    
+ 
     return(
         <div className="container">
             <input 
