@@ -18,3 +18,17 @@ function factorialize(num) {
     return result;
 } 
 console.log(factorialize(5))
+
+/////////////////////////////////////////////
+
+
+function factorialize2(num){
+    let result = 1
+    for(let i = 1; num > 0; num--){
+      result *= num;
+      // num = 5, 4, 3, 2, 1 because of num--
+      // result = 1, so 1 * 5 * 4 * 3 * 2 * 1
+    }
+    return result
+}
+console.log(factorialize2(5))

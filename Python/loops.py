@@ -9,12 +9,12 @@ print(n)
 
 # Breaking out of loops
 
-# while True:
-#     line = input("> ")
-#     if line == "done" :
-#         break
-#     print(line)
-# print("Done!")
+while True:
+    line = input("> ")
+    if line == "done" :
+        break
+    print(line)
+print("Done!")
 
 # Finishing an iteration with continue
 while True:
