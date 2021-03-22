@@ -2,11 +2,11 @@
 // Response should be a number.
 
 function findLongestWord(str) {
-    let words = str.split(" "); // space
+    let words = str.split(" "); // space - turn into Array
     let longest = "";
     for (let word of words) { // for of loop
         if (word.length > longest.length) longest = word;
-      } // loops throu each word, checks the lengths, and longest word gets stores in
+      } // loops throu each word, checks the lengths, and longest word gets stored in
         // longest variable, eventually when it gets to JUMPED, it will stay
         // because no other word is bigger than JUMPED.
     return longest.length;
