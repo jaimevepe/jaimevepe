@@ -25,4 +25,4 @@ for student in range(num_students):
 
     # Display the average
     print("The average score for student number", student + 1, "is:", average)
-    print("....Next student please....")
+    print("....Next student p")
