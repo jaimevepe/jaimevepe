@@ -1,3 +1,6 @@
+# Current semster tuition will increase 3% each year for 5 years.
+# write a program that calculates the tuition price from every year.
+
 semester = 8000.0
 increase = 0.03
 

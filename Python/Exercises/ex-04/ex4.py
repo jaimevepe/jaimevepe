@@ -10,11 +10,11 @@ def computepay(hours, rate):
     return pay # TODO: must have return on a function call
 
 
-hours2 = input("Enter hours again: ")
-rate2 = input("Enter rate: ")
+hours = input("Enter hours: ")
+rate = input("Enter rate: ")
 try: # Dangerous Code
-    fhour = float(hours2) # convert to decimal numbers
-    fRate = float(rate2)
+    fhour = float(hours) # convert to decimal numbers
+    fRate = float(rate)
 except:
     print("Error! Enter numeric input for rate and hours")
     quit() # to not continue to the code below
