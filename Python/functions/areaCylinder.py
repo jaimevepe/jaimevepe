@@ -6,7 +6,7 @@ Fill in the missing line for the calculation. The formula is 4r2.
 PI = 3.14159265358979     # global constant 
 
 def cylinder_area(rad):
-    area = PI*4*rad**2  
+    area = 4*PI*rad**2  
     print('The cylinder area is', format(area,'.2f'))
 
 def main():
